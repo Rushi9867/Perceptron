@@ -11,7 +11,7 @@ def main(data,modelName,plotName,eta,epochs):
     model_xor.fit(X,y)
     _ = model_xor.total_loss()
 
-    model_xor.save(filename=modelName,model_dir="new_model_xor")
+    model_xor.save(filename=modelName,model_dir="new_models")
     save_plot(df_XOR,model_xor,filename=plotName)
 
 if __name__ == '__main__':
@@ -22,4 +22,4 @@ if __name__ == '__main__':
     }
     ETA = 0.1
     EPOCHS =10
-    main(data=XOR,modelName="xor.model",plotName="new_xor.png",eta=ETA,epochs=EPOCHS)
+    main(data=XOR,modelName="xor.model",plotName="xor.png",eta=ETA,epochs=EPOCHS)

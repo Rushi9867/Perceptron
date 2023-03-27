@@ -11,7 +11,7 @@ def main(data,modelName,plotName,eta,epochs):
     model_or.fit(X,y)
     _ = model_or.total_loss()
 
-    model_or.save(filename=modelName,model_dir="new_model_or")
+    model_or.save(filename=modelName,model_dir="new_models")
     save_plot(df_OR,model_or,filename=plotName)
 
 if __name__ == '__main__':
@@ -22,5 +22,5 @@ if __name__ == '__main__':
     }
     ETA = 0.1
     EPOCHS = 10
-    main(data=OR,modelName="or.model",plotName="new_or.png",eta=ETA,epochs=EPOCHS)
+    main(data=OR,modelName="or.model",plotName="or.png",eta=ETA,epochs=EPOCHS)
     
